@@ -46,23 +46,20 @@ class Home:
         if st.session_state.get("logged_in"):
             st.success(f"{st.session_state.get('user_email')}님 환영합니다.")
 
-        # Kaggle 데이터셋 출처 및 소개
+        # 데이터셋 출처 및 소개 (population_trends.csv로 수정)
         st.markdown("""
                 ---
-                **Bike Sharing Demand 데이터셋**  
-                - 제공처: [Kaggle Bike Sharing Demand Competition](https://www.kaggle.com/c/bike-sharing-demand)  
-                - 설명: 2011–2012년 캘리포니아 주의 수도인 미국 워싱턴 D.C. 인근 도시에서 시간별 자전거 대여량을 기록한 데이터  
+                **Population Trends 데이터셋**  
+                - 제공처: 사용자 업로드 데이터  
+                - 설명: 2008–2023년 대한민국 전국 및 지역별 인구, 출생아수, 사망자수를 기록한 데이터  
                 - 주요 변수:  
-                  - `datetime`: 날짜 및 시간  
-                  - `season`: 계절  
-                  - `holiday`: 공휴일 여부  
-                  - `workingday`: 근무일 여부  
-                  - `weather`: 날씨 상태  
-                  - `temp`, `atemp`: 기온 및 체감온도  
-                  - `humidity`, `windspeed`: 습도 및 풍속  
-                  - `casual`, `registered`, `count`: 비등록·등록·전체 대여 횟수  
+                  - `연도`: 연도 (2008~2023)  
+                  - `지역`: 전국 및 17개 지역 (서울, 부산, 세종 등)  
+                  - `인구`: 해당 연도의 인구수  
+                  - `출생아수(명)`: 연간 출생아수  
+                  - `사망자수(명)`: 연간 사망자수  
                 """)
-
+        
 # ---------------------
 # 로그인 페이지 클래스
 # ---------------------
